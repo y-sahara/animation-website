@@ -1,9 +1,21 @@
+import {motion} from "framer-motion"
+
 function App() {
   return (
     <main className="h-screen bg-slate-600">
       <div className="container mx-auto">
         {/* header */}
-        <header className="flex justify-between items-center text-white h-16">
+        <motion.header 
+        initial={{y:-100}}
+        animate={{y:0}}
+        transition={{
+          type:"spring",
+          duration:1,
+          delay:0.5,
+          stiffness:130,
+
+        }}
+        className="flex justify-between items-center text-white h-16">
           <span className="font-bold text-2xl">framer website</span>
           <nav>
             <ul className="flex items-center gap-4">
@@ -18,7 +30,7 @@ function App() {
               </li>
             </ul>
           </nav>
-        </header>
+        </motion.header>
 
         {/* hero */}
         <section></section>

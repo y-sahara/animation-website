@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
+import ThreeModel from "./_components/ThreeModel";
 
 function App() {
   return (
-    <main className="h-screen bg-slate-800">
+    <main className="h-screen bg-slate-800 ">
       <div className="container mx-auto">
         {/* header */}
         <motion.header
@@ -33,7 +34,7 @@ function App() {
         </motion.header>
 
         {/* hero */}
-        <section className="lg:py-48">
+        <section className="lg:py-2">
           <div className="flex items-center justify-between">
             {/* left */}
             <div className="space-y-3">
@@ -82,7 +83,9 @@ function App() {
             </div>
 
             {/* 3D model */}
-            <div></div>
+            <div className="w-1/2">
+              <ThreeModel/>
+            </div>
           </div>
         </section>
       </div>
